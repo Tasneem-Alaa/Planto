@@ -1,0 +1,104 @@
+
+body{
+    background-color: #1b2316;
+    color: #c6c8c5;
+    font-family: Arial, sans-serif;
+}
+.second-sec {
+    margin: 100px;
+    text-align: center;
+    padding: 40px;
+    background-color: #1a1e13;
+    color: #c6c8c5;
+}
+
+/* #second-sec h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#second-sec h2::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: limegreen;
+    border-radius: 50px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+} */
+
+h2 {
+    font-size: 2em;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.cards-container
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 3%;
+    margin-top: 20px;
+}
+
+.plant{
+    width: 350px;
+    position: absolute;
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card {
+    background-color: #ffffff0f;
+    padding: 160px 30px 20px 30px;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px #00000033;
+    text-align: left;
+    transition: transform 0.3s;
+    position: relative;
+    margin-top: 50px;
+    max-width: 250px;
+    /* clip-path: path('M2,5 C2,8 8,8 8,5'); */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 40px; /* Same border-radius as the container */
+    padding: 0.5px; /* Adjust thickness */
+    background: linear-gradient(55deg , transparent,transparent, rgba(255, 255, 255, 0.475) , transparent , transparent );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+.icon
+{
+    width: 16px;
+    padding: 5px;
+    border: 1px solid #c6c8c5;
+    border-radius: 6px;
+    text-align: right;
+    display: inline;
+    
+}
+.price{
+   
+    display: flex;
+    justify-content: space-between; /* Places <h3> on the left and <img> on the right */
+    align-items: center; /* Vertically centers both the <h3> and the <img> */
+}
