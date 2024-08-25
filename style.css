@@ -2,7 +2,7 @@
 body{
     background-color: #1b2316;
     color: #c6c8c5;
-    font-family: Arial, sans-serif;
+    font-family: "Inter", sans-serif; 
 }
 
 *{
@@ -11,7 +11,7 @@ body{
 }
 
 #second-sec {
-    margin: 0px 200px;
+    margin: 0px 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,41 +54,64 @@ h2 {
     padding: 10px 20px;
     /* margin-bottom: 10px; */
     text-align: center;
+    font-weight: 500;
+}
+
+h3
+{
+    font-weight: 400;
+    font-size: 25px;
 }
 
 
-.cards-container
+.cards-container, .reviews-container
 {
     display: grid;
     justify-content: space-between;
     width:100%;
     grid-template-columns: auto auto auto;
-    gap: 3%;
+    column-gap: 40px;
+    row-gap: 80px;
     margin-top: 20px;
 }
 
-.plant{
-    width: 400px;
+.plant-img{
+    width: 130%;
     position: absolute;
     top: -95px;
     left: 50%;
     transform: translateX(-50%);
+    transition: all 1.5s ease;
 }
-.card {
+.card, .card-review {
     background-color: #ffffff0f;
-    padding: 200px 30px 20px 30px;
+    padding: 75% 50px 20px 50px;
     border-radius: 40px;
     box-shadow: 0 4px 8px #00000033;
     text-align: left;
-    transition: transform 0.3s;
+    cursor: pointer;
+    z-index: 5;
     position: relative;
-    margin-top: 50px;
     max-width: 300px;
-    height: 200px;
-    /* clip-path: path('M2,5 C2,8 8,8 8,5'); */
+    min-width: 200px;
+    transform-style: preserve-3d;
+    opacity: 0;
+    transform: scale(0.8) rotate(-10deg) translateY(50px);
+    animation: fadeInUp 2s ease forwards; /* Apply the fade-in animation */
 }
 
-.card::before {
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in the original position */
+    }
+}
+
+.card::before, .card-review::before {
     content: '';
     position: absolute;
     top: 0;
@@ -96,12 +119,30 @@ h2 {
     right: 0;
     bottom: 0;
     border-radius: 40px; /* Same border-radius as the container */
-    padding: 0.5px; /* Adjust thickness */
-    background: linear-gradient(55deg , transparent,transparent, rgba(255, 255, 255, 0.475) , transparent , transparent );
+    padding: var(--border-thickness, 0.5px); /* Adjust thickness */
+    background: linear-gradient(var(--gradient-angle, 55deg), transparent,transparent, rgba(255, 255, 255, 0.475) , transparent , transparent );
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
+    transition: padding 0.3s ease; /* Transition only padding */
 }
+
+.card:hover, .card-review:hover {
+    filter: drop-shadow(0 0 0px rgb(255, 255, 255, 60%));
+    color: rgb(255, 255, 255, 70%);
+    transform: scale(1.05) rotate(0deg) translateY(0);
+}
+
+.card:hover::before, .card-review:hover::before {
+    padding: 2px; /* Increase padding */
+}
+
+.card:hover .plant-img{
+    width: 135%;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 3));
+}
+
+
 
 .icon
 {
@@ -114,7 +155,6 @@ h2 {
     
 }
 .price{
-   
     display: flex;
     justify-content: space-between; /* Places <h3> on the left and <img> on the right */
     align-items: center; /* Vertically centers both the <h3> and the <img> */
@@ -131,42 +171,16 @@ h2 {
     width: 10px;
 }
 .customer-img{
+    grid-area: grid1;
     width: 60px;
     border-radius: 100%;
     margin:0;
-    position: relative;
-    top: -95px;
-    left: 50%;
-    transform: translateX(-50%);
 }
-.one-review{
-    background-color: #ffffff0f;
-    padding: 160px 30px 20px 30px;
-    border-radius: 40px;
-    box-shadow: 0 4px 8px #00000033;
-    text-align: left;
-    transition: transform 0.3s;
-    position: relative;
-    margin-top: 50px;
-    max-width: 200px;
-    height: 50;
-
+.card-review
+{
+    /* height: 150px; */
+    padding: 40px;
 }
-.one-review:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 40px; /* Same border-radius as the container */
-    padding: 0.5px; /* Adjust thickness */
-    background: linear-gradient(55deg , transparent,transparent, rgba(255, 255, 255, 0.475) , transparent , transparent );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-}
-
 .topRightCorner{
     margin:20px; 
     width:45px; 
@@ -179,4 +193,13 @@ h2 {
     width:45px;  
     margin-right: -40px; 
     margin-top:30px
+}
+
+.img-name-stars{
+    margin: 0px;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+    column-gap: 10px;
+    grid-template-areas: 'grid1 grid2' 'grid1 grid3' 'grid4 grid4';
 }
