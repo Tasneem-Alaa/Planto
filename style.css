@@ -4,11 +4,19 @@ body{
     color: #c6c8c5;
     font-family: Arial, sans-serif;
 }
-.second-sec {
-    margin: 100px;
+
+*{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#second-sec {
+    margin: 0px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 40px;
-    background-color: #1a1e13;
     color: #c6c8c5;
 }
 
@@ -34,25 +42,33 @@ body{
     margin-top: 10px;
 } */
 
+.h2-svg
+{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
 h2 {
     font-size: 2em;
     color: white;
     padding: 10px 20px;
-    margin-bottom: 50px;
+    /* margin-bottom: 10px; */
     text-align: center;
 }
+
 
 .cards-container
 {
     display: grid;
+    justify-content: space-between;
+    width:100%;
     grid-template-columns: auto auto auto;
-    justify-content: center;
     gap: 3%;
     margin-top: 20px;
 }
 
 .plant{
-    width: 350px;
+    width: 400px;
     position: absolute;
     top: -95px;
     left: 50%;
@@ -60,14 +76,15 @@ h2 {
 }
 .card {
     background-color: #ffffff0f;
-    padding: 160px 30px 20px 30px;
+    padding: 200px 30px 20px 30px;
     border-radius: 40px;
     box-shadow: 0 4px 8px #00000033;
     text-align: left;
     transition: transform 0.3s;
     position: relative;
     margin-top: 50px;
-    max-width: 250px;
+    max-width: 300px;
+    height: 200px;
     /* clip-path: path('M2,5 C2,8 8,8 8,5'); */
 }
 
@@ -101,4 +118,65 @@ h2 {
     display: flex;
     justify-content: space-between; /* Places <h3> on the left and <img> on the right */
     align-items: center; /* Vertically centers both the <h3> and the <img> */
+}
+.reviews{
+    
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 3%;
+}
+.checked{
+    color: #ffd700;
+    width: 10px;
+}
+.customer-img{
+    width: 60px;
+    border-radius: 100%;
+    margin:0;
+    position: relative;
+    top: -95px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.one-review{
+    background-color: #ffffff0f;
+    padding: 160px 30px 20px 30px;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px #00000033;
+    text-align: left;
+    transition: transform 0.3s;
+    position: relative;
+    margin-top: 50px;
+    max-width: 200px;
+    height: 50;
+
+}
+.one-review:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 40px; /* Same border-radius as the container */
+    padding: 0.5px; /* Adjust thickness */
+    background: linear-gradient(55deg , transparent,transparent, rgba(255, 255, 255, 0.475) , transparent , transparent );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+.topRightCorner{
+    margin:20px; 
+    width:45px; 
+    margin-left: -40px; 
+    margin-top:10px
+}
+
+.bottomLeftCorner{
+    margin:20px; 
+    width:45px;  
+    margin-right: -40px; 
+    margin-top:30px
 }
