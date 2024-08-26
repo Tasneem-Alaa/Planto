@@ -16,7 +16,7 @@ function handleGradient(element) {
 }
 
 // Apply to all card elements
-document.querySelectorAll('.card').forEach(handleGradient);
+document.querySelectorAll('.top-selling-card').forEach(handleGradient);
 
 // Apply to all card-review elements
 document.querySelectorAll('.card-review').forEach(handleGradient);
