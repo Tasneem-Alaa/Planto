@@ -1,0 +1,113 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.background-image {
+    /* background-image: url('media/register_background13.png'); */
+    /* background-size: 100%; */
+    background: linear-gradient(120deg, #719676, #3A6351);    
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+
+.content {
+    background-color: rgb(252, 249, 249);
+    padding: 40px;
+    border-radius: 10px;
+    color: #3A6351;
+    position: absolute;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+.content-top{
+    left: 36%;
+}
+.left-column {
+    top: 10%;
+    left: 7%;
+    transform: translate(-10%, 0.5%);
+}
+
+.right-column {
+    top: 10%;
+    right: 7%;
+    transform: translate(10%, 2%);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="radio"],
+input[type="checkbox"]
+
+/*input[type="submit"],
+input[type="reset"] */ 
+
+{
+    /* padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: transparent;
+    color: white; */
+
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #3A6351;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    border-bottom: 2px solid #3A6351;
+    outline: none;
+    background: transparent;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+.btn{
+    background: #3A6351;
+        color: #fff;
+        border: 1px solid black;
+        padding: 10px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 200px;
+        transform: translate(-80px,0);
+        margin-bottom: 10px;
+}
+.btn:hover {
+    background: #2A4D41;
+}
+
+h3 {
+    color: #2A4D41;
+    font-size: large;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: large;
+    margin-bottom: 7px;
+    display: block;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}

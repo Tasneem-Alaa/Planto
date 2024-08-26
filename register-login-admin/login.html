@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="media/login_icon2.png" type="image/x-icon" rel="icon">
+    <meta name="description" content="Log-In page to Planto Website">
+    <meta name="author" content="Rana Nasser">
+    <meta name="keywords" content="plants, trees, garden, green">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Planto - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login to Planto</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="loginEmail" required>
+                    <label for="loginEmail">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPassword" required>
+                    <label for="loginPassword">Password</label>
+                </div>
+                <input style="font-size: large;" type="reset" class="login-btn" value="Reset">
+                <input style="font-size: large;" type="submit" value="Log In" class="login-btn">
+                <p class="error-message" id="errorMessage" style="color: red;"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js" defer></script>
+</body>
+
+</html>

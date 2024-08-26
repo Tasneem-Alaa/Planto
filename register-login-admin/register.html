@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Planto - Register</title>
+    <link href="media/register_logo.jpg" type="image/x-icon" rel="icon">
+    <meta name="description" content="Register page to Planto Website">
+    <meta name="author" content="Rana Nasser">
+    <meta name="keywords" content="plants, trees, garden, green">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="background-image">
+        <div class="content content-top">
+            <h1 style="text-align: center;">Register Form</h1>
+        </div>
+        <form id="registerForm" action="login.html" method="post">
+            <fieldset>
+                <!-- Left Column -->
+                <div class="content left-column">
+                    <label style="font-size: large;" for="name">UserName</label>
+                    <input required id="name" type="text" name="name" placeholder="Enter your name please">
+                    <br><br>
+                    <label style="font-size: large;" for="email">Email</label>
+                    <input required id="email" type="email" name="email" placeholder="Enter your email please">
+                    <br><br>
+                    <label style="font-size: large;" for="password">Password</label>
+                    <input required id="password" type="password" name="password"
+                        placeholder="Enter your password please">
+                    <br><br>
+                    <label style="font-size: large;" for="birthdate">Birth Date</label>
+                    <input id="birthdate" type="date" name="BirthDate">
+                    <br><br>
+                    <label style="font-size: large;" for="male">Male</label>
+                    <input id="male" type="radio" name="gender" value="male">
+                    <br>
+                    <label style="font-size: large;" for="female">Female</label>
+                    <input id="female" type="radio" name="gender" value="female">
+                </div>
+
+                <!-- Right Column -->
+                <div class="content right-column">
+                    <h3>What is your Favourite plants Type</h3>
+                    <hr><hr>
+                    <label for="Alpines">Alpines</label>
+                    <input type="checkbox" id="Alpines" name="fav_plants" value="Alpines">
+                    <br><br>
+                    <label for="Bulbs">Bulbs</label>
+                    <input type="checkbox" id="Bulbs" name="fav_plants" value="Bulbs">
+                    <br><br>
+                    <label for="Climbers">Climbers</label>
+                    <input type="checkbox" id="Climbers" name="fav_plants" value="Climbers">
+                    <br><br>
+                    <label for="Ferns">Ferns</label>
+                    <input type="checkbox" id="Ferns" name="fav_plants" value="Ferns">
+                    <br><br> 
+                    <pre>
+                    <input type="reset" class="btn">
+                    <input type="submit" class="btn"></pre>
+                    
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="register.js" defer></script>
+</body>
+
+</html>
