@@ -747,12 +747,6 @@ body {
     cursor: pointer;
 }
 
-.container-sec3 .h2-svg svg {
-    width: 45px;
-    margin-left: -30px;
-    margin-right: -30px;
-}
-
 .container-sec3 .dots-pagination {
     margin-top: 20px;
     text-align: center;
