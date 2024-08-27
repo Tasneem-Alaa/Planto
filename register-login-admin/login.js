@@ -1,7 +1,8 @@
 // Wait for the DOM to fully load
 document.addEventListener('DOMContentLoaded', function () {
-    // Select the login form
+    // Select the login form and buttons
     const loginForm = document.getElementById('loginForm');
+    const backButton = document.querySelector('.back-btn');
 
     // Add an event listener for form submission
     loginForm.addEventListener('submit', function (e) {
@@ -24,8 +25,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('Login successful!');
                 window.location.href = 'homepage.html'; // Redirect to homepage
             } else {
-                alert('Invalid username or password');
+                document.getElementById('errorMessage').textContent = 'Invalid email or password';
+                document.getElementById('errorMessage').style.display = 'block'; // Show error message
             }
         }
     });
+
+    // Add an event listener for the back button
+    if (backButton) {
+        backButton.addEventListener('click', function () {
+            window.history.back(); // Go back to the previous page
+        });
+    }
 });
