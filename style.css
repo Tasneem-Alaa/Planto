@@ -514,34 +514,32 @@ body {
 }
 
 /* Sections Heading Div*/
-.main-heading-green-borders {
+.main-heading-green-borders, .container-sec3 .h2-svg  {
     margin: 100px 0px;
 }
 
 /* Sections main Heading */
-#second-sec h2 {
+#second-sec h2, .container-sec3 h2  {
     font-size: 2.5em;
     color: white;
     padding: 10px 20px;
     text-align: center;
     font-weight: 500;
 }
-
 /* Sections main Heading green borders */
-#second-sec .topRightCorner {
+#second-sec .topRightCorner, .container-sec3 .topRightCorner {
     margin:20px; 
     width:50px; 
     margin-left: -45px; 
     margin-top:22px
 }
 
-#second-sec .bottomLeftCorner {
+#second-sec .bottomLeftCorner, .container-sec3  .bottomLeftCorner  {
     margin:20px; 
     width:50px;  
     margin-right: -47px; 
     margin-top:42px
 }
-
 
 /* Top Selling Container & Reviews Container */
 .top-selling-cards-container,
@@ -674,17 +672,11 @@ body {
 .container-sec3 {
     color: #fff;
     text-align: center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     /* position: relative; */
-}
-
-.container-sec3 .h2-svg {
-    margin: auto;
-    text-align: center;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
 }
 
 .container-sec3 .card {
