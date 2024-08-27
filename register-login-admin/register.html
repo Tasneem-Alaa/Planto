@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Planto - Register</title>
+    <link href="media/register_logo.jpg" type="image/x-icon" rel="icon">
+    <meta name="description" content="Register page to Planto Website">
+    <meta name="author" content="Rana Nasser">
+    <meta name="keywords" content="plants, trees, garden, green">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="register-box">
+        <h2>Register To Planto</h2>
+        <form id="registerForm" action="login.html" method="post">
+            <div class="input-group">
+                <input required id="name" type="text" name="name">
+                <label for="name">UserName</label>
+            </div>
+            <div class="input-group">
+                <input required id="email" type="email" name="email">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-group">
+                <input required id="password" type="password" name="password">
+                <label for="password">Password</label>
+            </div>
+            <div class="input-group">
+                <input id="birthdate" type="date" name="BirthDate">
+                <label for="birthdate">Birth Date</label>
+            </div>
+
+            <div class="radio-group">
+                <input id="male" type="radio" name="gender" value="male">
+                <label for="male" class="radio-label">Male</label>
+
+                <input id="female" type="radio" name="gender" value="female">
+                <label for="female" class="radio-label">Female</label>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="reset-btn">Reset</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="register.js" defer></script>
+</body>
+
+</html>
