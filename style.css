@@ -680,16 +680,34 @@ body {
 }
 
 .container-sec3 .card {
+    margin: 0px 20%;
     background-color: #ffffff0f;
     padding: 50px;
-    border-radius: 30px;
+    border-radius: 40px;
     position: relative;
-    max-width: 800px;
+    width:80%;
     height:250px
 }
 
+/* Cards white border */
+.container-sec3 .card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 40px; /* Same border-radius as the container */
+    padding: 1.5px; /* Adjust thickness */
+    background: linear-gradient(var(--gradient-angle, 25deg),transparent, rgba(255, 255, 255, 0.475) , transparent );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    transition: padding 0.3s ease; /* Transition only padding */
+}
+
 .container-sec3 .plant-image {
-    max-width: 600px;
+    max-width: 550px;
     height: auto;
     border-radius: 20px;
     position: absolute;
