@@ -1,3 +1,22 @@
+//section 1 js
+let currentSlide = 0;
+
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+
+//******************************************************************************************
+
+//section 2 js
 // Function to update gradient angle
 function handleGradient(element) {
     element.onmousemove = (e) => {
@@ -20,3 +39,4 @@ document.querySelectorAll('.top-selling-card').forEach(handleGradient);
 
 // Apply to all card-review elements
 document.querySelectorAll('.card-review').forEach(handleGradient);
+
