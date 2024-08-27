@@ -389,7 +389,7 @@ mask-composite: exclude;
 }
 /************************************************************/
 /*trendy plants text dicoration*/
-.h2-svg {
+.section1_container .h2-svg {
 position: absolute;
 top: 1760px;
 left: 1100px;
@@ -397,7 +397,7 @@ z-index: 3;
 font-size: 60px;
 }
 
-.topRightCorner {
+.section1_container .topRightCorner {
 position: absolute;
 top: 30px;
 right: -80px;
@@ -405,7 +405,7 @@ width: 130px;
 z-index: 3;
 }
 
-.bottomLeftCorner {
+.section1_container .bottomLeftCorner {
 position: absolute;
 bottom: 30px;
 left: -80px;
@@ -485,3 +485,187 @@ width: 50px;
 height: 50px;
 }
 /* finish section 1*/
+
+/*########################################################################################*/
+
+/* section_2 */
+body {
+    background-color: #1b2316;
+    color: #c6c8c5;
+    font-family: "Inter", sans-serif; 
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in the original position */
+    }
+}
+
+#second-sec {
+    margin: 0px 10%;
+    display: flex;   
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sections Heading Div*/
+.main-heading-green-borders {
+    margin: 100px 0px;
+}
+
+/* Sections main Heading */
+#second-sec h2 {
+    font-size: 2.5em;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Sections main Heading green borders */
+#second-sec .topRightCorner {
+    margin:20px; 
+    width:50px; 
+    margin-left: -45px; 
+    margin-top:22px
+}
+
+#second-sec .bottomLeftCorner {
+    margin:20px; 
+    width:50px;  
+    margin-right: -47px; 
+    margin-top:42px
+}
+
+
+/* Top Selling Container & Reviews Container */
+.top-selling-cards-container,
+.reviews-container {
+    display: grid;
+    justify-content: space-between;
+    width:100%;
+    grid-template-columns: auto auto auto;
+    gap: 80px 40px;
+    margin-top: 20px;
+}
+
+/* Top Selling Cards & Reviews Cards */
+.top-selling-card,
+.card-review {
+    background-color: #ffffff0f;
+    padding: 75% 50px 20px 50px;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px #00000033;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    max-width: 300px;
+    min-width: 200px;
+    /* animation: fadeInUp 2s ease forwards; Apply the fade-in animation */
+}
+
+/* Elements style in the cards */
+#second-sec h3 {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.top-selling-plant-img {
+    width: 130%;
+    position: absolute;
+    top: -95px; 
+    left: 50%;
+    transform: translateX(-50%);
+    transition: filtter,width 1.5s ease;
+}
+
+.top-selling-price {
+    display: flex;
+    justify-content: space-between; /* Places <h3> on the left and <img> on the right */
+    align-items: center; /* Vertically centers both the <h3> and the <img> */
+}
+
+#second-sec .icon {
+    width: 16px;
+    padding: 5px;
+    border: 1px solid #c6c8c5;
+    border-radius: 6px;
+    text-align: right;
+    display: inline;
+    
+}
+
+.img-name-stars {
+    margin: 0px;
+    display: grid;
+    align-items: end;
+    justify-content: start;
+    column-gap: 10px;
+    grid-template-areas: 'grid1 grid2' 'grid1 grid3' 'grid4 grid4';
+    color: white;
+}
+
+/* stars style */
+#second-sec .checked {
+    color: #ffd700;
+    width: 10px;
+}
+#second-sec .stars {
+    word-spacing: 8px;
+    margin-top: -50px;
+}
+
+.customer-img {
+    grid-area: grid1;
+    width: 50px;
+    border-radius: 100%;
+    margin:0;
+}
+.card-review {
+    padding: 40px;
+}
+
+/* Cards white border */
+.top-selling-card::before,
+.card-review::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 40px; /* Same border-radius as the container */
+    padding: var(--border-thickness, 0.5px); /* Adjust thickness */
+    background: linear-gradient(var(--gradient-angle, 55deg), transparent,transparent, rgba(255, 255, 255, 0.475) , transparent , transparent );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    transition: padding 0.3s ease; /* Transition only padding */
+}
+
+/* Animation for cards */
+.top-selling-card:hover,
+.card-review:hover {
+    filter: drop-shadow(0 0 0px rgb(255, 255, 255, 60%));
+    color: rgb(255, 255, 255, 70%);
+    transform: scale(1.05);
+    transition: all 1s ease;
+}
+
+/* make the white padding thicker when hover on the cards */
+.top-selling-card:hover::before,
+.card-review:hover::before {
+    padding: 2px;
+}
+
+.top-selling-card:hover .top-selling-plant-img {
+    width: 135%;
+    filter: drop-shadow(4px 4px 10px rgb(45, 45, 45 ,3));
+}
+
+/*#######################################################################*/
