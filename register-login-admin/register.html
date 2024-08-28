@@ -16,24 +16,28 @@
     <div class="register-box">
         <h2>Register To Planto</h2>
         <form id="registerForm" action="login.html" method="post">
-            <div class="input-group">
+            <div class="input-group" style="grid-area: g1;">
                 <input required id="name" type="text" name="name">
                 <label for="name">UserName</label>
             </div>
-            <div class="input-group">
+            <div class="input-group" style="grid-area: g2;">
                 <input required id="email" type="email" name="email">
                 <label for="email">Email</label>
             </div>
-            <div class="input-group">
+            <div class="input-group" style="grid-area: g3;">
                 <input required id="password" type="password" name="password">
                 <label for="password">Password</label>
             </div>
-            <div class="input-group">
+            <div class="input-group" style="grid-area: g4;">
+                <input required id="confirm-pass" type="password" name="confirm-pass">
+                <label for="confirm-pass">Confirm Password</label>
+            </div>
+            <div class="input-group" style="grid-area: g5;">
                 <input id="birthdate" type="date" name="BirthDate">
                 <label for="birthdate">Birth Date</label>
             </div>
 
-            <div class="radio-group">
+            <div class="radio-group" style="grid-area: g6;">
                 <input id="male" type="radio" name="gender" value="male">
                 <label for="male" class="radio-label">Male</label>
 
@@ -41,11 +45,12 @@
                 <label for="female" class="radio-label">Female</label>
             </div>
 
-            <div class="button-group">
+            <div class="button-group" style="grid-area: g7;">
                 <button type="button" class="reset-btn">Reset</button>
                 <button type="submit" class="submit-btn">Submit</button>
             </div>
         </form>
+        <img id="leaf" src="media/leaf4.png" alt="">
     </div>
     <script src="register.js" defer></script>
 </body>

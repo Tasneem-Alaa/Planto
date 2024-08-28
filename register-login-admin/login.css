@@ -1,26 +1,23 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #719676, #3A6351);
-    background-image: url("media/register_background13.png");
+    font-family: "Inter", sans-serif;     background: linear-gradient(120deg, #719676, #3A6351);
+    background-image: url("media/loginbg6.jpg");
     background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
 }
 
 .login-box {
     background-color: rgba(255, 255, 255, 0.14);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     padding: 60px 40px 20px;
     border-radius: 20px;
     box-shadow: 2px 4px 40px 10px rgba(0, 0, 0, 0.8);
     text-align: center;
-    max-width: 500px;
-    width: 90%;
-    height: 350px;
+    max-width: 550px;
+    height: 450px;
+    width: 50%;
     position: relative;
 }
 
@@ -37,49 +34,48 @@ body {
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
-    transition: background 0.3s ease;
+    transition: padding 0.3s ease;
     z-index: -1;
 }
 
 .login-box h2 {
-    margin: 0 0 20px;
+    margin: 0 0 50px;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 100%;
 }
 
 .input-group input {
     width: 100%;
-    padding: 15px 0;
+    padding: 50px 0px 10px;
     font-size: 16px;
-    color: #1b2316;
+    color: #ffffff;
+    margin-bottom: 30px;
     border: none;
     border-bottom: 2px solid #ffffff;
     outline: none;
     background: transparent;
-    margin-bottom: 20px;
 }
 
 .input-group label {
     position: absolute;
+    font-size: 20px;
     top: 10px;
     left: 0;
     color: white;
     pointer-events: none;
     transition: 0.5s;
-    margin-bottom: 30px;
-    font-size: 20px;
 }
 
 .input-group input:focus~label,
 .input-group input:valid~label {
-    top: -18px;
+    top: -15px;
     left: 0;
     font-size: 16px;
 }
@@ -88,7 +84,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .back-btn,
@@ -98,11 +94,10 @@ body {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
     width: 120px;
     font-size: large;
-    margin-top: 50px;
 }
 
 .back-btn:hover {
@@ -118,4 +113,25 @@ body {
     margin-top: 10px;
     display: none;
     /* Adjusted display style */
+}
+
+#leaf {
+    position: absolute; 
+    width:45%; 
+    bottom:-110px; 
+    left:430px; 
+    transform:rotate(-30deg);
+    animation: rotateBackAndForth 2s infinite ease-in-out;
+}
+
+@keyframes rotateBackAndForth {
+    0% {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(-35deg); /* Rotate slightly to the left */
+    }
+    100% {
+        transform: rotate(-30deg); /* Rotate slightly to the right */
+    }
 }

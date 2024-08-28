@@ -40,62 +40,97 @@ document.querySelectorAll('.top-selling-card').forEach(handleGradient);
 // Apply to all card-review elements
 document.querySelectorAll('.card-review').forEach(handleGradient);
 
+document.querySelectorAll('.card').forEach(handleGradient);
+
 //******************************************************************************************
 //section3
 const contents = [
-    {
-        title: "We Have Small And Best O2 Plants Collection's",
-        description: "Plants produce oxygen, absorb carbon dioxide, and provide food, shelter, and medicine. They are essential for life on Earth.",
-        image: "reference/Rose Gold Feminine Calligraphy Monogram Logo(15) 2.png"
-    },
-    {
-        title: "Explore Exotic Plant Species",
-        description: "Discover a variety of rare and exotic plant species that thrive in different climates.",
-        image: "reference/Rose Gold Feminine Calligraphy Monogram Logo(15) 2-4.png"
-    },
-    {
-        title: "Boost Your Mood With Indoor Plants",
-        description: "Indoor plants have been shown to improve mood and mental health.",
-        image: "reference/Rose Gold Feminine Calligraphy Monogram Logo(15) 2.png"
-    },
-    {
-        title: "Best Oxygen-Producing Plants",
-        description: "Learn about the best oxygen-producing plants that can improve air quality.",
-        image: "reference/Rose Gold Feminine Calligraphy Monogram Logo(15) 2-2.png"
-    }
+  {
+    title: "We Have Small And Best O2 Plants ",
+    description:
+      "Plants are living organisms that produce their own food through photosynthesis. They convert sunlight into energy,using carbon dioxide and water, releasing oxygen as a byproduct.",
+    image: "reference/pot-plant/scene.gltf",
+  },
+  {
+    title: "Explore Exotic Plant Species",
+    description:
+      "Plants play a vital role in ecosystems by providing food, shelter, and oxygen. They form the foundation of food chains and support biodiversity through their complex interactions with other species.",
+    image: "reference/model2/scene.gltf",
+  },
+  {
+    title: "Boost Your Mood With Indoor Plants",
+    description:
+      "Plants are incredibly diverse, ranging from tiny mosses to towering trees. They have evolved various adaptations, like roots for water absorption and leaves for sunlight capture.",
+    image: "reference/model/scene.gltf",
+  },
+  {
+    title: "Best Oxygen-Producing Plants",
+    description:
+      "Human civilization relies on plants for food, medicine, and materials like wood and fibers. Agricultural advancements have allowed us to cultivate and domesticate plants for nourishment and industry.",
+    image: "reference/rhyzome_plant/scene.gltf",
+  },
 ];
 
 let currentPage = 0;
 
 function updateContent(pageIndex) {
-    const content = contents[pageIndex];
-    document.getElementById('card-title').innerText = content.title;
-    document.getElementById('card-description').innerText = content.description;
-    document.querySelector('.plant-image').src = content.image;
-    document.querySelector('.current-page').innerText = `0${pageIndex + 1}`;
+  const content = contents[pageIndex];
+  document.getElementById("card-title").innerText = content.title;
+  document.getElementById("card-description").innerText = content.description;
+  document.querySelector(".plant-image").src = content.image;
+  document.querySelector(".current-page").innerText = `0${pageIndex + 1}`;
 
-    // Update active dot
-    document.querySelectorAll('.dot').forEach((dot, index) => {
-        dot.classList.toggle('active', index === pageIndex);
-    });
+  // Update pagination dots
+  document.querySelectorAll(".pagination-dot").forEach((dot, index) => {
+    if (index === pageIndex) {
+      dot.classList.add("active"); // Add active to the correct dot
+    } else {
+      dot.classList.remove("active"); // Remove active from others
+    }
+  });
 }
 
 function nextContent() {
-    currentPage = (currentPage + 1) % contents.length;
-    updateContent(currentPage);
+  currentPage = (currentPage + 1) % contents.length;
+  updateContent(currentPage);
 }
 
 function prevContent() {
-    currentPage = (currentPage - 1 + contents.length) % contents.length;
-    updateContent(currentPage);
+  currentPage = (currentPage - 1 + contents.length) % contents.length;
+  updateContent(currentPage);
 }
 
 function goToPage(pageIndex) {
-    currentPage = pageIndex;
-    updateContent(pageIndex);
+  currentPage = pageIndex;
+  updateContent(pageIndex);
 }
 
 // Initialize content
 updateContent(currentPage);
 
+// Add event listeners to pagination dots
+document.querySelectorAll(".pagination-dot").forEach((dot, index) => {
+  dot.addEventListener("click", () => goToPage(index));
+});
+
+
 //********************************************************************************************
+
+//****                 Footer JavaScript Code            ******
+
+document.addEventListener("DOMContentLoaded", function () {
+  const subscribeButton = document.getElementById("subscribeButton");
+
+  subscribeButton.addEventListener("click", function () {
+    const emailInput = document.getElementById("emailInput").value.trim();
+
+    if (emailInput) {
+      subscribeButton.innerHTML = "<b>SUBSCRIBED !!</b>";
+      subscribeButton.style.backgroundColor = "grey"; // Black background
+      subscribeButton.style.color = "#FFFFFF"; // White text
+      subscribeButton.style.border = "1px solid white";
+    } else {
+      alert("Please enter your email address.");
+    }
+  });
+});
