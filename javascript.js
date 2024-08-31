@@ -68,11 +68,14 @@ updateContent2(currentPage2);
 document.querySelectorAll(".dot").forEach((dot2, index2) => {
   dot2.addEventListener("click", () => goToPage(index2));
 });
+<<<<<<< HEAD
 // JavaScript to handle the "Explore" button click
 document.querySelector('.explore_button').addEventListener('click', function() {
     window.location.href = 'explore.html';
 });
 
+=======
+>>>>>>> 5d01cc7734973f023b78bca1d9a9f1b045dde9a4
 
 
 //******************************************************************************************
