@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="reference/explore icon.webp" type="image/x-icon" rel="icon">
+    <meta name="description" content="Explore page to Planto Website">
+    <meta name="author" content="Rana Nasser">
+    <meta name="keywords" content="explore, plants, trees, garden, green">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Explore Plants - Planto</title>
+    <style>
+        body {
+            background-color: #1b2316;
+            color: aliceblue;
+            font-size: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            background: white;
+            color: #1b2316;
+            border: 1px solid black;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 25px;
+            width: 250px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background: rgb(129, 129, 129);
+        }
+
+        .emailInput {
+            width: 400px;
+            height: 45px;
+            font-size: 25px;
+        }
+
+        .offers {
+            background-color: #222c1d;
+            padding-top: 5px;
+            font-size: 35px;
+        }
+
+        footer {
+            background-color: #222c1d;
+            margin-top: -40px;
+            font-size: 38px;
+        }
+
+        /* Flexbox styling to arrange products in two columns */
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            /* Adjust space between products */
+        }
+
+        .product {
+            background-color: #333a2f;
+            border-radius: 8px;
+            padding: 20px;
+            width: calc(50% - 20px);
+            /* Two products per row */
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .product img {
+            width: 700px; /* Set the desired width */
+            height:auto; /* Set the desired height */
+            object-fit: cover; /* Ensure the image covers the area without stretching */
+            border-radius: 8px;
+        }
+
+        h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header style="text-align: center;">
+        <h1>Explore Our Plant Collection</h1>
+        <a href="index.html" target="_blank">
+            <button style="width: 400px;" class="index">Back to Planto Page</button>
+        </a>
+        
+    </header>
+
+    <!-- Product Showcase Section -->
+    <section class="products">
+        <div class="product-grid">
+            <!-- Example product 1 -->
+            <div class="product">
+                <img src="reference/plant1.jpg" alt="Hollyone" class="product-image">
+                <h3>Hollyone</h3>
+                <p>$20.00</p>
+                <button type="button" class="card">Add to Cart</button>
+            </div>
+            <!-- Example product 2 -->
+            <div class="product">
+                <img src="reference/plant8.jpg" width="700px" alt="Der-Rose" class="product-image">
+                <h3>Der Rose</h3>
+                <p>$15.00</p>
+                <button type="button" class="card">Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+            <div class="product">
+                <img src="reference/plant4.jpg" width="700px" alt="Generic" class="product-image">
+                <h3>Generic</h3>
+                <p>$10.00</p>
+                <button type="button" class="card">Add to Cart</button>
+            </div>
+            <!-- Example product 3 -->
+            <div class="product">
+                <img src="reference/plant3.jpg" width="700px" alt="Toopify" class="product-image">
+                <h3>Toopify</h3>
+                <p>$12.00</p>
+                <button type="button" class="card">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="reference/plant9.jpg" width="700px" alt="Aphighjoy" class="product-image">
+                <h3>Aphighjoy</h3>
+                <p>$8.00</p>
+                <button type="button" class="card">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="reference/plant6.jpg" width="700px"  alt="Green-Time" class="product-image">
+                <h3>Green-Time</h3>
+                <p>$5.00</p>
+                <button type="button" class="card">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="offers">
+        <h2>Special Offers</h2>
+        <p>Sign up for our newsletter to get exclusive discounts on our plant collection!</p>
+        <form action="#" method="POST">
+            <input class="emailInput" type="email" placeholder="Enter your email" required>
+            <button class="subscribeButton" type="submit">Subscribe</button>
+        </form>
+        <br><br><br>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Planto. All rights reserved.</p>
+        <br>
+    </footer>
+
+    <script>
+            // handle the "Add to Cart" button click
+            document.querySelectorAll('.card').forEach(button => {
+                button.addEventListener('click', function () {
+                    button.innerHTML = "<b>Added to card !!</b>";
+                    button.style.backgroundColor = "grey";
+                    button.style.color = "white";
+                    button.style.border = "1px solid black";
+                    alert("Plant added to cart!");
+                });
+            });
+
+
+            //handle the "subscribe" button click
+            const subscribeButton = document.getElementsByClassName("subscribeButton")[0];
+
+            const emailInput = document.getElementsByClassName("emailInput")[0];
+
+            subscribeButton.addEventListener("click", function (event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                const emailValue = emailInput.value.trim();
+
+                if (emailValue) {
+                    subscribeButton.innerHTML = "<b>SUBSCRIBED !!</b>";
+                    subscribeButton.style.backgroundColor = "grey"; 
+                    subscribeButton.style.color = "white"; 
+                    subscribeButton.style.border = "1px solid white";
+                    alert("You are SUBSCRIBED!! Enjoy with the DISCOUNT");
+                } else {
+                    alert("Please enter your email address.");
+                }
+            });
+
+    </script>
+</body>
+
+</html>

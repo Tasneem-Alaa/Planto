@@ -14,6 +14,67 @@ function moveSlide(direction) {
 }
 
 
+const contents2 = [
+  {
+    title: "Calathea plant",
+    image: "reference/Rose Gold Feminine Calligraphy Monogram Logo(15) 2.png",
+  },
+  {
+    title: "Rose Gold",
+    image: "reference/Rose Gold Feminine Calligraphy Monogram Logo(15) 2-5.png",
+  },
+  {
+    title: "Monstera Deliciosa",
+      image: "reference/Rose Gold Feminine Calligraphy Monogram Logo(15) 2-2.png",
+  },
+];
+
+let currentPage2 = 0;
+
+function updateContent2(pageIndex2) {
+  const content2 = contents2[pageIndex2];
+  document.getElementById("top-card-title").innerText = content2.title;
+  document.querySelector(".top-card-img").src = content2.image;
+
+  // Update pagination dots
+  document.querySelectorAll(".dot").forEach((dot, index2) => {
+    if (index2 === pageIndex2) {
+      dot.classList.add("active"); // Add active to the correct dot
+    } else {
+      dot.classList.remove("active"); // Remove active from others
+    }
+  });
+}
+
+function nextContent2() {
+  currentPage2 = (currentPage2 + 1) % contents2.length;
+  updateContent2(currentPage2);
+}
+
+function prevContent2() {
+  currentPage2 = (currentPage2 - 1 + contents2.length) % contents.length;
+  updateContent2(currentPage2);
+}
+
+function goToPage2(pageIndex2) {
+  currentPage2 = pageIndex2;
+  updateContent2(pageIndex2);
+}
+
+// Initialize content
+updateContent2(currentPage2);
+
+// Add event listeners to pagination dots
+document.querySelectorAll(".dot").forEach((dot2, index2) => {
+  dot2.addEventListener("click", () => goToPage(index2));
+});
+// JavaScript to handle the "Explore" button click
+document.querySelector('.explore_button').addEventListener('click', function() {
+    window.location.href = 'explore.html';
+});
+
+
+
 //******************************************************************************************
 
 //section 2 js
@@ -37,10 +98,20 @@ function handleGradient(element) {
 // Apply to all card elements
 document.querySelectorAll('.top-selling-card').forEach(handleGradient);
 
+document.querySelectorAll('.slider').forEach(handleGradient);
+
+document.querySelectorAll('.glassy_background1').forEach(handleGradient);
+document.querySelectorAll('.glassy_background2').forEach(handleGradient);
+
 // Apply to all card-review elements
 document.querySelectorAll('.card-review').forEach(handleGradient);
 
 document.querySelectorAll('.card').forEach(handleGradient);
+
+document.querySelectorAll('.review_section1').forEach(handleGradient);
+
+
+
 
 //******************************************************************************************
 //section3
