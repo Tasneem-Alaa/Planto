@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href="reference/plant 2.png" type="image/x-icon" rel="icon">
+    <link href="reference/plant-icon.png" type="image/x-icon" rel="icon">
     <meta name="description" content="HomePage to Planto Website">
     <meta name="author" content="Team 6">
     <meta name="keywords" content="plants, trees, garden, green">
@@ -24,47 +24,85 @@
     <section class="section1_container">
       <!--navigation bar-->
       <div class="nav-bar">
-        <img
-        src="reference/plant 2.png"
-        class="logo_image"
-      />
-      <h2 class="web_name">Planto.</h2>
-        <button class="home">Home</button>
-        <input
-            list="plants-list"
-            id="plants"
-            name="plants"
-            class="plants-type"
-            placeholder="Plants Type"
-        />
-        <datalist id="plants-list">
-            <option value="Annuals">
-            <option value="Biennials">
-            <option value="Perennials">
-            <option value="Epiphytes">
-        </datalist>
-        
-        <a href="more.html" target="_blank">
-            <button class="more">More</button>
-        </a>
+        <img src="reference/plant-icon.png" class="logo-icon">
+        <h2 class="web-name">Planto.</h2>
+        <!-- drop menu when width is less than 1100 -->
+        <div class="dropdown-menu" id="dropdownMenu">
+          <button class="home nav-link">Home</button>
+          <input
+              list="plants-list"
+              id="plants"
+              name="plants"
+              class="plants-type nav-link"
+              placeholder="Plants Type"
+          />
+          <datalist id="plants-list">
+              <option value="Annuals">
+              <option value="Biennials">
+              <option value="Perennials">
+              <option value="Epiphytes">
+          </datalist>
 
-        <a href="contact.html" target="_blank">
-            <button class="contact">Contact</button>
-        </a>
+          <a href="more.html" target="_blank">
+              <button class="more nav-link">More</button>
+          </a>
 
-        <a href="register-login-admin/login.html" target="_blank">
-            <button class="log-in">LogIn</button>
-        </a>
+          <a href="contact.html" target="_blank">
+              <button class="contact nav-link">Contact</button>
+          </a>
 
-        <a href="register-login-admin/register.html" target="_blank">
-            <button class="sign-up">SignUp</button>
-        </a>
+          <a href="register-login-admin/login.html" target="_blank">
+              <button class="log-in nav-link">LogIn</button>
+          </a>
 
+          <a href="register-login-admin/register.html" target="_blank">
+              <button class="sign-up nav-link">SignUp</button>
+          </a>
+        </div>
+        <!-- nav bar -->
+        <div class="nav-links">
+          <button class="home nav-link">Home</button>
+          <input
+              list="plants-list"
+              id="plants"
+              name="plants"
+              class="plants-type nav-link"
+              placeholder="Plants Type"
+          />
+          <datalist id="plants-list">
+              <option value="Annuals">
+              <option value="Biennials">
+              <option value="Perennials">
+              <option value="Epiphytes">
+          </datalist>
 
-        <button class = "icon1" style="left: 2520px;top:40px;"><img src="reference/search (1).png" width="50px;" height="50px"></button>
-        <button class = "icon1" style="left: 2670px;top:40px;"><img src="reference/bag (2).png" width="50px;" height="50px"></button>
-        <button class = "icon1" style="left: 2820px;top:40px;"><img src="reference/list.png" width="50px;" height="50px"></button>
-      </div>
+          <a href="more.html" target="_blank">
+              <button class="more nav-link">More</button>
+          </a>
+
+          <a href="contact.html" target="_blank">
+              <button class="contact nav-link">Contact</button>
+          </a>
+
+          <a href="register-login-admin/login.html" target="_blank">
+              <button class="log-in nav-link">LogIn</button>
+          </a>
+
+          <a href="register-login-admin/register.html" target="_blank">
+              <button class="sign-up nav-link">SignUp</button>
+          </a>
+        </div>
+        <button class="icon1" style="left: 2520px;top:40px;">
+            <img src="reference/search (1).png" width="50px;" height="50px">
+        </button>
+        <button class="icon1" style="left: 2670px;top:40px;">
+            <img src="reference/bag (2).png" width="50px;" height="50px">
+        </button>
+        <!-- Last icon for toggling menu -->
+        <button class="icon1 toggle-nav" style="left: 2820px;top:40px;" onclick="toggleDropdown()">
+            <img src="reference/list.png" width="50px;" height="50px">
+        </button>
+    </div>
       <!--*-->
       <!--breath natural div-->
       <div class="breath_natural" style="grid-area: g1; justify-self: start;">
@@ -116,13 +154,11 @@
             </div>
           </div>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa maxime eaque accusamus impedit, 
-            nobis perferendis repellat iusto alias eveniet
-            possimus quos quibusdam repellendus sunt error ad placeat illum voluptatem at!</p>   
+            nobis perferendis repellat iusto alias eveniet</p>   
       </div>
       <!--*-->
-      <!--svg for green border-->
-      <div class="h2-svg" style="display:flex;align-content:center; grid-area:g4">          
-        <svg class="bottomLeftCorner" width="100" height="150" viewBox="0 0 74 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="h2-svg" style="display:flex; grid-area:g4">          
+        <svg class="bottomLeftCorner" width="74" height="75" viewBox="0 0 74 75" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 3L3 49C3 61.7026 13.2975 72 26 72H71.5" stroke="url(#paint0_linear_22_94)" stroke-width="5" stroke-linecap="round"/>
             <defs>
             <linearGradient id="paint0_linear_22_94" x1="2.5" y1="0.999999" x2="71.5" y2="72" gradientUnits="userSpaceOnUse">
@@ -132,8 +168,8 @@
             </linearGradient>
             </defs>
         </svg>
-        <h2>Our Trendy Plants</h2>
-        <svg class="topRightCorner" width="100" height="150" viewBox="0 0 74 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <h2>Our Top Selling</h2>
+        <svg class="topRightCorner" width="74" height="75" viewBox="0 0 74 75" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M71.5 72L71.5 26C71.5 13.2974 61.2025 3 48.5 3L2.99999 3.00001" stroke="url(#paint0_linear_22_93)" stroke-width="5" stroke-linecap="round"/>
             <defs>
             <linearGradient id="paint0_linear_22_93" x1="72" y1="74" x2="3" y2="3" gradientUnits="userSpaceOnUse">
@@ -142,8 +178,8 @@
             <stop offset="1" stop-color="#50790B"/>
             </linearGradient>
             </defs>
-            </svg>
-      </div>
+            </svg>  
+    </div>
       <!--*-->
       <!--section1_div1-->
       <div class="glassy_background1" style="grid-area: g5">

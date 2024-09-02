@@ -1,4 +1,15 @@
 //section 1 js
+
+function toggleDropdown() {
+  var menu = document.getElementById("dropdownMenu");
+  if (menu.style.display === "block") {
+      menu.style.display = "none";
+  } else {
+      menu.style.display = "block";
+  }
+}
+
+
 let currentSlide = 0;
 
 function moveSlide(direction) {
