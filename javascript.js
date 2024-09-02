@@ -1,4 +1,21 @@
 //section 1 js
+
+// nav bar code
+function toggleDropdown() {
+  var menu = document.getElementById("dropdownMenu");
+  if (menu.style.display === "block") {
+      menu.style.display = "none";
+  } else {
+      menu.style.display = "block";
+  }
+}
+
+// JavaScript to handle the "Explore" button click
+document.querySelector('.explore_button').addEventListener('click', function() {
+  window.location.href = 'explore.html';
+});
+
+// slider code
 let currentSlide = 0;
 
 function moveSlide(direction) {
@@ -12,7 +29,6 @@ function moveSlide(direction) {
     slides[currentSlide].classList.add('active');
     dots[currentSlide].classList.add('active');
 }
-
 
 const contents2 = [
   {
@@ -68,14 +84,6 @@ updateContent2(currentPage2);
 document.querySelectorAll(".dot").forEach((dot2, index2) => {
   dot2.addEventListener("click", () => goToPage(index2));
 });
-<<<<<<< HEAD
-// JavaScript to handle the "Explore" button click
-document.querySelector('.explore_button').addEventListener('click', function() {
-    window.location.href = 'explore.html';
-});
-
-=======
->>>>>>> 5d01cc7734973f023b78bca1d9a9f1b045dde9a4
 
 
 //******************************************************************************************
