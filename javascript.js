@@ -1,5 +1,6 @@
 //section 1 js
 
+// nav bar code
 function toggleDropdown() {
   var menu = document.getElementById("dropdownMenu");
   if (menu.style.display === "block") {
@@ -9,7 +10,12 @@ function toggleDropdown() {
   }
 }
 
+// JavaScript to handle the "Explore" button click
+document.querySelector('.explore_button').addEventListener('click', function() {
+  window.location.href = 'contact-explore/explore.html';
+});
 
+// slider code
 let currentSlide = 0;
 
 function moveSlide(direction) {
@@ -23,7 +29,6 @@ function moveSlide(direction) {
     slides[currentSlide].classList.add('active');
     dots[currentSlide].classList.add('active');
 }
-
 
 const contents2 = [
   {
@@ -126,25 +131,25 @@ const contents = [
     title: "We Have Small And Best O2 Plants ",
     description:
       "Plants are living organisms that produce their own food through photosynthesis. They convert sunlight into energy,using carbon dioxide and water, releasing oxygen as a byproduct.",
-    image: "reference/pot-plant/scene.gltf",
+    image: "reference/models 3D/pot-plant/scene.gltf",
   },
   {
     title: "Explore Exotic Plant Species",
     description:
       "Plants play a vital role in ecosystems by providing food, shelter, and oxygen. They form the foundation of food chains and support biodiversity through their complex interactions with other species.",
-    image: "reference/model2/scene.gltf",
+    image: "reference/models 3D/model2/scene.gltf",
   },
   {
     title: "Boost Your Mood With Indoor Plants",
     description:
       "Plants are incredibly diverse, ranging from tiny mosses to towering trees. They have evolved various adaptations, like roots for water absorption and leaves for sunlight capture.",
-    image: "reference/model/scene.gltf",
+    image: "reference/models 3D/model/scene.gltf",
   },
   {
     title: "Best Oxygen-Producing Plants",
     description:
       "Human civilization relies on plants for food, medicine, and materials like wood and fibers. Agricultural advancements have allowed us to cultivate and domesticate plants for nourishment and industry.",
-    image: "reference/rhyzome_plant/scene.gltf",
+    image: "reference/models 3D/rhyzome_plant/scene.gltf",
   },
 ];
 
