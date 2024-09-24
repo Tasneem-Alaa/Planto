@@ -41,3 +41,12 @@ Welcome to **Planto**! A responsive and interactive plant store website built us
   - Cross-references credentials with stored data for authentication. 
   - Invalid credentials prompt alerts, while successful logins redirect users to the Planto homepage.
   - Admin users gain access to the Admin page with specific credentials.
+
+## 🚀Team Names:
+- **Rana Nasser**
+- **Tasneem Alaa**
+- **Esraa Taha**
+- **Gihad Mahmoud**
+- **Eman Ashraf**
+- **Alaa Rabie**
+
