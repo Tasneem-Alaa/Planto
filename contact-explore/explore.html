@@ -35,6 +35,7 @@
             width: 250px;
             height: 60px;
             margin-bottom: 20px;
+            font-weight: bold;
         }
 
         button:hover {
@@ -89,6 +90,12 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
+
+        .emailInput{
+            background-color: transparent;
+            color: aliceblue;
+            border: solid 2px white;
+        }
     </style>
 </head>
 
@@ -96,7 +103,7 @@
     <!-- Header with Navigation -->
     <header style="text-align: center;">
         <h1>Explore Our Plant Collection</h1>
-        <a href="../index.html" target="_blank">
+        <a href="../index.html">
             <button style="width: 400px;" class="index">Back to Planto Page</button>
         </a>
         
@@ -107,40 +114,40 @@
         <div class="product-grid">
             <!-- Example product 1 -->
             <div class="product">
-                <img src="../reference/plant1.jpg" alt="Hollyone" class="product-image">
+                <img src="../reference/plant1-removebg-preview.png" alt="Hollyone" class="product-image">
                 <h3>Hollyone</h3>
                 <p>$20.00</p>
                 <button type="button" class="card">Add to Cart</button>
             </div>
             <!-- Example product 2 -->
             <div class="product">
-                <img src="../reference/plant8.jpg" width="700px" alt="Der-Rose" class="product-image">
+                <img src="../reference/plant2-removebg-preview.png" width="700px" alt="Der-Rose" class="product-image">
                 <h3>Der Rose</h3>
                 <p>$15.00</p>
                 <button type="button" class="card">Add to Cart</button>
             </div>
             <!-- Add more products as needed -->
             <div class="product">
-                <img src="../reference/plant4.jpg" width="700px" alt="Generic" class="product-image">
+                <img src="../reference/plant3-removebg-preview.png" width="700px" alt="Generic" class="product-image">
                 <h3>Generic</h3>
                 <p>$10.00</p>
                 <button type="button" class="card">Add to Cart</button>
             </div>
             <!-- Example product 3 -->
             <div class="product">
-                <img src="../reference/plant3.jpg" width="700px" alt="Toopify" class="product-image">
+                <img src="../reference/plant4-removebg-preview.png" width="700px" alt="Toopify" class="product-image">
                 <h3>Toopify</h3>
                 <p>$12.00</p>
                 <button type="button" class="card">Add to Cart</button>
             </div>
             <div class="product">
-                <img src="../reference/plant9.jpg" width="700px" alt="Aphighjoy" class="product-image">
+                <img src="../reference/plant5-removebg-preview.png" width="700px" alt="Aphighjoy" class="product-image">
                 <h3>Aphighjoy</h3>
                 <p>$8.00</p>
                 <button type="button" class="card">Add to Cart</button>
             </div>
             <div class="product">
-                <img src="../reference/plant6.jpg" width="700px"  alt="Green-Time" class="product-image">
+                <img src="../reference/plant6-removebg-preview.png" width="700px"  alt="Green-Time" class="product-image">
                 <h3>Green-Time</h3>
                 <p>$5.00</p>
                 <button type="button" class="card">Add to Cart</button>
@@ -153,7 +160,7 @@
         <h2>Special Offers</h2>
         <p>Sign up for our newsletter to get exclusive discounts on our plant collection!</p>
         <form action="#" method="POST">
-            <input class="emailInput" type="email" placeholder="Enter your email" required>
+            <input class="emailInput" type="email" placeholder="Enter your email" required >
             <button class="subscribeButton" type="submit">Subscribe</button>
         </form>
         <br><br><br>
